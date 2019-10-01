@@ -1,6 +1,8 @@
+vendor/
+_vendor-*
 .git
 .gitignore
-Dockerfile
+.dockerignore
 docker-compose.yml
 README.md
 *.md

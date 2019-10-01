@@ -1,41 +1,41 @@
-package main
+package routes
 
 import (
-	mux "github.com/gorilla/mux"
+	"net/http"
 )
 
 type Route struct {
-	Method			string
-	Path			string
-	HandlerFunc 	mux.HandlerFunc
+	Method      string
+	Path        string
+	HandlerFunc http.HandlerFunc
 }
 
-type Routes	[]Route
+type Routes []Route
 
-var routes = Routes {
+var routes = Routes{
 	Route{
 		"GET",
 		"/artists",
-		getAllArtistsConcerts,
+		GetAllArtistsConcerts,
 	},
 	Route{
 		"GET",
-		"/artists/{artistname}",
-		getArtistConcerts
+		"/artist/{artistname}",
+		GetArtistConcerts,
 	},
 	Route{
 		"POST",
-		"/artists",
-		createArtistConcerts
+		"/artist",
+		CreateArtistConcerts,
 	},
 	Route{
 		"PUT",
-		"/artists/{artistname}",
-		updateArtistConcerts
+		"/artist/{artistname}",
+		UpdateArtistConcerts,
 	},
 	Route{
 		"DELETE",
-		"/artists/{artistname}",
-		deleteArtistConcerts
+		"/artist/{artistname}",
+		DeleteArtistConcerts,
 	},
 }

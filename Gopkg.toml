@@ -25,6 +25,14 @@
 #   unused-packages = true
 
 
+[[constraint]]
+  name = "github.com/gomodule/redigo"
+  version = "2.0.0"
+
+[[constraint]]
+  name = "github.com/gorilla/mux"
+  version = "1.7.3"
+
 [prune]
   go-tests = true
   unused-packages = true

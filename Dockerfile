@@ -12,5 +12,6 @@ RUN dep ensure
 EXPOSE 8000
 
 # Build the app
-RUN go build -o /src/main .
-CMD ["./main"]
+#RUN go build -o /src/main .
+#CMD ["./main"]
+CMD ["go", "run", "src/main.go"]
